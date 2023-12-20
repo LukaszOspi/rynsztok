@@ -24,7 +24,7 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center',
     height: '100vh',
-    backgroundColor: '#ADD8E6', // Light blue background
+    backgroundColor: '#0074ff', // Light blue background
   },
   textWrapper: {
     textAlign: 'center',
