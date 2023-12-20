@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react';
 
-function App() {
+const App = () => {
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      window.location.href = 'https://www.tvp.info';
+    }, 5000);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={styles.container}>
+      <div style={styles.textWrapper}>
+        <p style={styles.mainText}>Für Deutschland, auf wiedersehen!</p>
+        <p style={styles.subText}>Ospi</p>
+      </div>
     </div>
   );
-}
+};
+
+const styles = {
+  container: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '100vh',
+    backgroundColor: '#ADD8E6', // Light blue background
+  },
+  textWrapper: {
+    textAlign: 'center',
+  },
+  mainText: {
+    fontSize: '24px',
+    color: '#333', // Adjust the color as needed
+    marginBottom: '10px',
+  },
+  subText: {
+    fontSize: '20px',
+    color: '#555', // Adjust the color as needed
+  },
+};
 
 export default App;
